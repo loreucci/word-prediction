@@ -1,3 +1,9 @@
+# word-prediction
+
+A predictive keyboard based on n-grams extracted from a wikipedia corpus.
+
+![demo](https://raw.githubusercontent.com/loreucci/word-prediction/master/word-prediction.gif)
+
 ### Usage
 
 Before executing the predictive keyboard, the corpus must be processed by executing

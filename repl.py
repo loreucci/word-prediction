@@ -13,9 +13,9 @@ import argparse
 
 
 # parsing arguments
-parser = argparse.ArgumentParser("Magic keyboard")
-parser.add_argument('-n', type=int, default=3)
-parser.add_argument('--embedding', action="store_true")
+parser = argparse.ArgumentParser("predictive keyboard")
+parser.add_argument('-n', type=int, default=3, help="order of the n-grams")
+parser.add_argument('--embedding', action="store_true", help="use word embedding")
 args = parser.parse_args()
 
 # load N-grams with optional embedding
@@ -58,9 +58,9 @@ class WordCompleter(Completer):
 
 
 if __name__ == '__main__':
-    print('Welcome to magic keyboard')
+    print('\n Welcome to the predictive keyboard!')
     while True:
-        answer = prompt("> ", completer=WordCompleter())
+        answer = prompt(" > ", completer=WordCompleter())
         if answer == 'q':
             break
         ngrams.update(answer)

@@ -2,12 +2,16 @@ from preprocessing import get_sentences_from_text
 
 import xml.etree.ElementTree as ET
 import argparse
+import nltk
 
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser("Magic keyboard")
-    parser.add_argument('--embedding', action="store_true")
+    # download punkt
+    nltk.download("punkt")
+
+    parser = argparse.ArgumentParser("predictive keyboard")
+    parser.add_argument('--embedding', action="store_true", help="Create word embedding")
     args = parser.parse_args()
 
     # parse xml to get content of pages
